@@ -1,0 +1,17 @@
+create database bd_detran;
+use bd_detran;
+
+create table tb_proprietario (
+cd_cpf varchar(11) not null primary key,
+nm_proprietario varchar(60) not null,
+ds_profissao varchar(60) not null);
+
+create table tb_carro (
+cd_placa varchar(7) not null primary key,
+nm_marca varchar(45),
+nm_modelo varchar(45),
+vl_fipe double,
+ds_cor varchar(45),
+ds_categoria varchar(45),
+fk_cd_cpf varchar(11) not null,
+foreign key (fk_cd_cpf) references tb_proprietario(cd_cpf));

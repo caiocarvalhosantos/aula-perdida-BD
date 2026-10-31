@@ -1,0 +1,34 @@
+insert into tb_proprietario (cd_cpf, nm_proprietario, ds_profissao) values
+('11111111111', 'João Silva', 'Professor'),
+('11122233312', 'Maria Silva', 'Contador'),
+('22211133321', 'Lucas Ferreira', 'Advogado'),
+('11111122212', 'José Ferreira', 'Médico'),
+('33322211132', 'Julio Gomes', 'Empresário'),
+('12312312312', 'Gabriela Silva', 'Vendedor'),
+('32132132120', 'Nicholas Ferreira', 'Professor'),
+('00011100010', 'Eduardo Silva', 'Administrador');
+
+insert into tb_carro (cd_placa, nm_marca, nm_modelo, vl_fipe, ds_cor, 
+ds_categoria, fk_cd_cpf) values 
+('AAA7000', 'Volkswagen', 'AMAROK', 72000.00, 'Branca', 'Pickup','11111111111'),
+('BRA2A45', 'Chevrolet', 'Onix', 58000.00, 'Prata', 'Hatch', '11122233312'),
+('QWE1B23', 'Toyota', 'Corolla', 98000.00, 'Preto', 'Sedan', '11122233312'),
+('XYZ9C87', 'Honda', 'Civic', 102000.00, 'Cinza', 'Sedan', '22211133321'),
+('JKL4D56', 'Hyundai', 'HB20', 62000.00, 'Vermelho', 'Hatch', '11111122212'),
+('MNO5E12', 'Jeep', 'Compass', 135000.00, 'Branco', 'SUV', '33322211132'),
+('PRS6F34', 'Ford', 'Ranger', 150000.00, 'Azul', 'Pickup', '12312312312'),
+('TUV7G89', 'Fiat', 'Strada', 78000.00, 'Prata', 'Pickup', '32132132120'),
+('ABC1H90', 'Volkswagen', 'T-Cross', 110000.00, 'Cinza', 'SUV', '32132132120'),
+('DEF2J11', 'Nissan', 'Kicks', 95000.00, 'Branco', 'SUV', '32132132120'),
+('GHI3K22', 'Renault', 'Kwid', 48000.00, 'Laranja', 'Compacto', '00011100010'),
+('LMN4L33', 'Peugeot', '208', 70000.00, 'Azul', 'Hatch', '00011100010'),
+('OPQ5M44', 'Citroen', 'C4 Cactus', 88000.00, 'Bege', 'SUV', '22211133321'),
+('RST6N55', 'Toyota', 'Hilux', 185000.00, 'Preto', 'Pickup', '32132132120'),
+('UVW7P66', 'Honda', 'HR-V', 120000.00, 'Prata', 'SUV', '11111122212'),
+('XYZ8Q77', 'Chevrolet', 'Tracker', 115000.00, 'Vermelho', 'SUV','33322211132'),
+('AAA1R88', 'Fiat', 'Argo', 65000.00, 'Branco', 'Hatch', '12312312312'),
+('BBB2S99', 'Volkswagen', 'Virtus', 85000.00, 'Cinza', 'Sedan','11111122212'),
+('CCC3T10', 'Hyundai', 'Creta', 125000.00, 'Preto', 'SUV', '11111122212'),
+('DDD4U21', 'Jeep', 'Renegade', 118000.00, 'Verde', 'SUV', '33322211132');
+Select cd_cpf as 'CPF', nm_proprietario as 'NOME' from tb_proprietario 
+where nm_proprietario like '%Silva';
